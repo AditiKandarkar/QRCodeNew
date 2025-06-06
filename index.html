@@ -9,18 +9,16 @@
   <button onclick="playAudio('english')">English</button>
   <button onclick="playAudio('marathi')">Marathi</button>
 
-  <audio id="audioPlayer" controls style="display:none;"></audio>
+  <audio id="englishAudio" src="Song_1.mpeg"></audio>
+  <audio id="marathiAudio" src="marathi_audio.mp3"></audio>
 
   <script>
     function playAudio(lang) {
-      const audioPlayer = document.getElementById("audioPlayer");
       if (lang === "english") {
-        audioPlayer.src = "Song_1.mpeg";
+        document.getElementById("englishAudio").play();
       } else {
-        audioPlayer.src = "marathi_audio.mp3";
+        document.getElementById("marathiAudio").play();
       }
-      audioPlayer.style.display = "block";
-      audioPlayer.play();
     }
   </script>
 </body>
