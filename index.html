@@ -69,17 +69,17 @@
       const english = document.getElementById("englishAudio");
       const marathi = document.getElementById("marathiAudio");
 
-      // Stop both audios and reset
+      
       english.pause();
       marathi.pause();
       english.currentTime = 0;
       marathi.currentTime = 0;
 
-      // Hide both players
+      
       english.style.display = "none";
       marathi.style.display = "none";
 
-      // Show and play selected
+      
       if (lang === "english") {
         english.style.display = "block";
         english.play();
