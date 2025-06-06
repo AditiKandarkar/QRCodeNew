@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Choose Your Language</title>
+</head>
+<body>
+  <h2>Which language do you want to listen to?</h2>
+  <button onclick="playAudio('english')">English</button>
+  <button onclick="playAudio('marathi')">Marathi</button>
+
+  <audio id="audioPlayer" controls style="display:none;"></audio>
+
+  <script>
+    function playAudio(lang) {
+      const audioPlayer = document.getElementById("audioPlayer");
+      if (lang === "english") {
+        audioPlayer.src = "Song_1.mpeg";
+      } else {
+        audioPlayer.src = "marathi_audio.mp3";
+      }
+      audioPlayer.style.display = "block";
+      audioPlayer.play();
+    }
+  </script>
+</body>
+</html>
